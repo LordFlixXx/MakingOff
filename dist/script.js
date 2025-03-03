@@ -23,7 +23,7 @@ navbarFormCloseBtn.addEventListener("click", searchBarIsActive);
 
 // Variáveis globais para controle da paginação
 let currentPage = 1;
-const moviesPerPage = 50;
+const moviesPerPage = 48;
 
 // Função para carregar filmes
 function loadMovies(page = 1, filters = {}) {
