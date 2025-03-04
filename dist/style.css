@@ -293,7 +293,7 @@ nav{ margin-right: 200px;}
 
 input ~ .checked-radio-bg{
     --width: 85px;
-    --left: 5px;
+    --left: 12px;
 
     background: var(--oxford-blue);
     position: absolute;
@@ -305,13 +305,13 @@ input ~ .checked-radio-bg{
 }
 
     #popular:checked ~ .checked-radio-bg{ 
-        --width: 73px;
-        --left: 90px;
+        --width: 83px;
+        --left: 106px;
     }
 
     #newest:checked ~ .checked-radio-bg{
         --width: 81px;
-        --left: 163px;
+        --left: 196px;
     }
 
 .movies-grid{
