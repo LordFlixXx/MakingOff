@@ -33,8 +33,7 @@ function loadMovies(page = 1, filters = {}) {
     queryTerm,
     genre,
     sortBy,
-    orderBy,
-    year
+    orderBy
   } = filters;
   const apiUrl =
     `https://yts.mx/api/v2/list_movies.json?limit=${moviesPerPage}&page=${page}` +
@@ -43,8 +42,7 @@ function loadMovies(page = 1, filters = {}) {
     (queryTerm ? `&query_term=${queryTerm}` : "") +
     (genre ? `&genre=${genre}` : "") +
     (sortBy ? `&sort_by=${sortBy}` : "") +
-    (orderBy ? `&order_by=${orderBy}` : "") +
-    (year ? `&year=${year}` : "");
+    (orderBy ? `&order_by=${orderBy}` : "");
 
   console.log("Fetching movies with URL:", apiUrl); // Log para depuração
 
@@ -121,8 +119,6 @@ const applyFilters = () => {
 const getFilters = () => {
   const genre = document.querySelector('.filter-dropdowns select[name="genre"]')
     .value;
-  const year = document.querySelector('.filter-dropdowns select[name="year"]')
-    .value;
   const quality = document.querySelector(
     ".filter-dropdowns select.quality-filter"
   ).value;
@@ -138,7 +134,6 @@ const getFilters = () => {
 
   return {
     genre: genre !== "all genres" ? genre : null,
-    year: year !== "all years" ? year : null,
     quality: quality || null,
     minimumRating: minimumRating || null,
     sortBy: sortBy || null,
